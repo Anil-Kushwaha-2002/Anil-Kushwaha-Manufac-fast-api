@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "anil-kushwaha-manufac-fast-api"
+version = "0.1.0"
+description = "FastAPI service to analyze Retail Selling Price (RSP) of Petrol and Diesel for Metro Cities"
+authors = ["Anil Kushwaha , kumaranil48309@gmail.com"]
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+fastapi = "^0.100.0"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+pandas = "^2.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+black = "^24.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
