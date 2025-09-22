@@ -24,6 +24,7 @@ https://drive.google.com/file/d/1Zgb8KVmKoEWvk_3kMq9TVV7KDTujkfPd/view
 ---
 
 ## Project Structure
+```
 anil-kushwaha-manufac-fast-api/
 │── app/
 │ ├── init.py
@@ -36,7 +37,7 @@ anil-kushwaha-manufac-fast-api/
 │── pyproject.toml # Poetry dependencies
 │── Dockerfile # Docker build file
 │── README.md # Project docs
-
+```
 ---
 ## Installation & Usage
 ### 1. Clone the repo
@@ -45,10 +46,14 @@ git clone https://github.com/<your-username>/anil-kushwaha-manufac-fast-api.git
 cd anil-kushwaha-manufac-fast-api
 ```
 ### 2. Install dependencies using Poetry
-`poetry install`
+```bash
+poetry install
+```
 
 ### 3. Run FastAPI server
-`poetry run uvicorn app.main:app --reload`
+```bash
+poetry run uvicorn app.main:app --reload
+```
 
 ### Server will start at:
 👉 http://127.0.0.1:8000
