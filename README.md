@@ -1,17 +1,23 @@
 # Anil-Kushwaha-Manufac-fast-api
 # Fuel Price Analytics API - Anil Kushwaha
 
-This is a FastAPI-based backend service to analyze **Retail Selling Price (RSP) of Petrol and Diesel in Metro Cities**.  
+This is a FastAPI-based backend service to analyze **Retail Selling Price (RSP) of Petrol and Diesel in Metro Cities**.  Built for the Manufac Analytics SDE Interview (Backend API Task v5).
+
 Dataset: [NDAP (NITI Aayog)](https://ndap.niti.gov.in/dataset/7916)  
 https://drive.google.com/file/d/1Zgb8KVmKoEWvk_3kMq9TVV7KDTujkfPd/view
 
 ### Features
-
-- Get list of available metro cities  
-- Analyze **min, max, avg** fuel price for a city & fuel type  
+- Loads dataset into-memory with Pandas (missing values -> 0).
+- Endpoints: - Analyze **min, max, avg** fuel price for a city & fuel type  
+  - `GET /cities` — list available metro cities
+  - `GET /price_analysis?city=<>&fuel_type=<>` — min, max, avg for city+fuel
+  - `POST /price_analysis` — same analysis using JSON body
+  - `GET /latest_price?city=<>&fuel_type=<>` — latest date & price for city+fuel
 - Get **latest price** for a city & fuel type  
 - Interactive API docs via Swagger UI (`/docs`)  
-
+- No DB required, data read from `data/fuel_prices.csv`
+- **Dockerized**
+  
 ---
 
 ### Tech Stack
